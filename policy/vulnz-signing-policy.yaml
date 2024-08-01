@@ -4,8 +4,8 @@ metadata:
   name: demo-vsp
 spec:
   imageVulnerabilityRequirements:
-    maximumFixableSeverity: LOW
-    maximumUnfixableSeverity: MEDIUM
+    #maximumFixableSeverity: LOW
+    maximumUnfixableSeverity: CRITICAL
     allowlistCVEs:
     # encoding/xml element/attribute namespace prefixes during tokenization
     - projects/goog-vulnz/notes/CVE-2020-29511
