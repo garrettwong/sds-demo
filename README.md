@@ -172,8 +172,9 @@ git push --all
 
 ```shell
 export VERSION_TAG=$(cat app/.version)
+export GPG_TTY=$(tty)
 git tag -s -m "demo" $VERSION_TAG
-git push origin $VERSION_TAG
+git push origin $VERSION_TAGcccccccc           cv  v     t hjhukjj sjpx
 ```
 
 * Navigate to Cloud Build [triggers](https://console.cloud.google.com/cloud-build/triggers)

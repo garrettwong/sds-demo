@@ -52,7 +52,8 @@ for r in "${cloudbuild_roles[@]}"
 do
   gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$PROJECT_NUMBER@cloudbuild.gserviceaccount.com \
-    --role $r
+    --role $r \
+    --condition None
 done
 
 # deploy
@@ -112,10 +113,12 @@ gcloud kms keys add-iam-policy-binding $KMS_KEY_NAME \
     --keyring $KMS_RING_NAME \
     --location $REGION \
     --member serviceAccount:$PROJECT_NUMBER@cloudbuild.gserviceaccount.com \
-    --role roles/cloudkms.signerVerifier
+    --role roles/cloudkms.signerVerifier \
+    --condition None
 
 gcloud kms keys add-iam-policy-binding $KMS_KEY_NAME \
     --keyring $KMS_RING_NAME \
     --location $REGION \
     --member serviceAccount:$PROJECT_NUMBER@cloudbuild.gserviceaccount.com \
-    --role roles/cloudkms.viewer
+    --role roles/cloudkms.viewer \
+    --condition None
