@@ -106,7 +106,7 @@ steps:
       gcloud beta container binauthz attestations sign-and-create \
         --attestor projects/${PROJECT_ID}/attestors/built-by-cloud-build \
         --artifact-url $(cat app/image-digest.txt) \
-        --keyversion ${_KMS_KEY_NAME}
+        --keyversion ${_KMS_KEY_NAME} --quiet
 
   # Create release in Google Cloud Deploy
   - id: release
