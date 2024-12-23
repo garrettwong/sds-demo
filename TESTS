@@ -1,3 +1,4 @@
+# Run Application
 
 first_line=$(kubectl get pods --no-headers | head -n 1)
 
@@ -10,3 +11,7 @@ echo "First pod name: $pod_name"
 kubectl port-forward $pod_name 8080:8080
 
 curl localhost:8080
+
+
+# Get Latest Container Tag and SHA256 (used for app/Dockerfile)
+gcloud container images describe --project distroless gcr.io/distroless/static-debian12:latest
