@@ -4,7 +4,7 @@ metadata:
   name: demo-vsp
 spec:
   imageVulnerabilityRequirements:
-    maximumFixableSeverity: HIGH
+    maximumFixableSeverity: CRITICAL
     maximumUnfixableSeverity: HIGH
     allowlistCVEs:
     # encoding/xml element/attribute namespace prefixes during tokenization
