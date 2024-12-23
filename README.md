@@ -171,10 +171,11 @@ git push --all
 * Git tag and push, to trigger the GCB pipeline:
 
 ```shell
+source increment_minor.sh
 export VERSION_TAG=$(cat app/.version)
 export GPG_TTY=$(tty)
-git tag -s -m "demo" $VERSION_TAG
-git push origin $VERSION_TAGcccccccc           cv  v     t hjhukjj sjpx
+git tag -s -m "demo" $VERSION_TAG #garrett
+git push origin $VERSION_TAG
 ```
 
 * Navigate to Cloud Build [triggers](https://console.cloud.google.com/cloud-build/triggers)
