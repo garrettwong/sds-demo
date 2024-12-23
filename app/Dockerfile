@@ -1,5 +1,5 @@
 ARG BUILD_BASE=golang@sha256:cfc9d1b07b1ef4f7a4571f0b60a99646a92ef76adb7d9943f4cb7b606c6554e2
-ARG FINAL_BASE=gcr.io/distroless/static-debian11@sha256:7198a357ff3a8ef750b041324873960cf2153c11cc50abb9d8d5f8bb089f6b4e
+ARG FINAL_BASE=gcr.io/distroless/static-debian12@sha256:5c7e2b465ac6a2a4e5f4f7f722ce43b147dabe87cb21ac6c4007ae5178a1fa58
 
 # BUILD
 FROM $BUILD_BASE as builder
