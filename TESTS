@@ -1,0 +1,12 @@
+
+first_line=$(kubectl get pods --no-headers | head -n 1)
+
+# Extract the pod name from the first line
+pod_name=$(echo "$first_line" | awk '{print $1}')
+
+# Print the pod name
+echo "First pod name: $pod_name"
+
+kubectl port-forward $pod_name 8080:8080
+
+curl localhost:8080
